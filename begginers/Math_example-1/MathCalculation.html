@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+		<script>
+        			var fatherAge = 60;
+					var sonAge = 20;
+					
+					function CalculateAge(age){ 
+						var total = fatherAge+age+sonAge+age;
+						return total;
+					}
+					document.write("Togather, After 10 Years Latter The Age Will be: "+CalculateAge(10));
+					
+					document.write("<hr/>");
+					
+					var firstNumber = 5;
+					var total = 20;
+					function CalculateNumber(){ 
+						var secondNumber = total-firstNumber;
+						return secondNumber;
+					}
+					document.write("The Second Number will be "+CalculateNumber());
+					
+					document.write("<hr/>");
+					
+					
+					var sonAge = 20;
+						
+					function CalcuateFSAge(Age){ 
+						var father = 2*(sonAge + Age);
+						var son = sonAge + Age;
+						
+						document.write("Father Age is: "+father+"<br/>");
+						document.write("Son Age is: "+son+"<br/>");
+						
+						return father+son;
+						
+					} 
+					document.write("Father and Son Altogether age is: "+CalcuateFSAge(20));
+					
+					
+					
+					
+        </script>
+</body>
+</html>
