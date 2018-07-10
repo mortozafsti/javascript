@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+		<table align="center">
+        	<form name="myform" method="post" action="formValidation.html" onsubmit="return formValidation()">
+            	<tr>
+                	<td><label>Name</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="Name"  /><label id="name"></label></td>
+                   
+                </tr>
+                 
+                <tr>
+                	<td><label>Gender</label></td>
+                    <td>:</td>
+                    <td>
+                    	<input type="radio" name="Gender"  value="Male" />Male
+                        <input type="radio" name="Gender"  value="FeMale" />FeMale
+                        <label id="gender"></label>
+                    </td>
+                    
+                </tr>
+                
+                 <tr>
+                	<td><label>Education</label></td>
+                    <td>:</td>
+                    <td>
+                    	<input type="checkbox" name="Education" id="Education" value="SSC" />SSC
+                        <input type="checkbox" name="Education" id="Education" value="HSC" />HSC
+                    </td>
+                </tr>
+                <tr>
+                	<td><label>Round</label></td>
+                    <td>:</td>
+                    <td>
+                    	<select name="Round" id="Round">
+                        	<option>Select the Round</option>
+                            <option>Round-35</option>
+                            <option>Round-36</option>
+                            <option>Round-37</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                	<td><label>Message</label></td>
+                    <td>:</td>
+                    <td>
+                    	<textarea rows="5" cols="22" name="msg" id="msg"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                	<td><label></label></td>
+                    <td></td>
+                    <td>
+                    	<input type="submit" name="Submit" />
+                    	<input type="reset" name="Reset" />
+                    </td>
+                </tr>
+            </form>
+        </table>		<script>
+        		function formValidation(){ 
+						var name = document.forms["myform"]["Name"].value;
+						var gender = document.forms["myform"]["Gender"].value;
+						var education = document.forms["myform"]["Education"].value;
+						var education = document.forms["myform"]["msg"].value;
+						
+						if(name==""){ 
+							 document.getElementById('name').innerHTML="Name must be filled out";
+						     return false;
+						}else if(name.length < 3){ 
+							document.getElementById('name').innerHTML="Name Length at Least 3 Character";
+						     return false;
+						}else if(gender==""){ 
+							document.getElementById('gender').innerHTML="Tell me your gender";
+							return false;
+						}else{ 
+							document.write("Name: "+name+"<br/>");
+							document.write("Gender: "+gender+"<br/>");
+						}
+					
+				}
+        </script>
+</body>
+</html>
